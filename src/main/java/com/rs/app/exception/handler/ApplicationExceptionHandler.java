@@ -14,6 +14,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import com.rs.app.exception.UserNotFoundException;
 import com.rs.app.model.ErrorResponse;
 
+/**
+ * 
+ * @author ramesh
+ */
 @ControllerAdvice
 @RequestMapping(produces = "application/vnd.error+json")
 public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler {

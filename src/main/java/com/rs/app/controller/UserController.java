@@ -17,6 +17,10 @@ import com.rs.app.exception.UserNotFoundException;
 import com.rs.app.exception.handler.CustomResonseErrorHandler;
 import com.rs.app.model.User;
 
+/**
+ * 
+ * @author ramesh
+ */
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -44,7 +48,14 @@ public class UserController {
 
 	@GetMapping("/")
 	public User userByRequestParam(@RequestParam("username") String username) {
-		return getUser(username);
+		User user = null;
+		try {
+			user = getUser(username);
+		} catch (UserNotFoundException unfe) {
+			System.err.println(unfe.getMessage());
+			throw new UserNotFoundException(unfe.getMessage(), unfe);
+		}
+		return user;
 	}
 
 	@GetMapping("/{username}")

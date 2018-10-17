@@ -8,7 +8,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.ResponseErrorHandler;
 
 import com.rs.app.exception.UserNotFoundException;
-
+/**
+ * 
+ * @author ramesh
+ */
 //@Component
 public class CustomResonseErrorHandler implements ResponseErrorHandler {
 

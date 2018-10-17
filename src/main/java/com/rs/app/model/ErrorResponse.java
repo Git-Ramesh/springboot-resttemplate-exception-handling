@@ -2,6 +2,10 @@ package com.rs.app.model;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * @author ramesh
+ */
 public class ErrorResponse implements Serializable {
 	private static final long serialVersionUID = 6510233923422837788L;
 	private long timestamp;
